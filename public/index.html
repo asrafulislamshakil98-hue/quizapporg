@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>বাংলা কুইজ মাস্টার</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="image/logo.png" alt="Logo" class="logo">
+        <h1>কুইজ মাস্টার</h1>
+        <div id="coin-box">💰 কয়েন: <span id="coins">0</span></div>
+    </div>
+
+    <!-- স্ক্রিন ১: ক্যাটাগরি লিস্ট -->
+    <div id="category-screen" class="container">
+        <h2>ক্যাটাগরি সিলেক্ট করুন</h2>
+        <div id="category-list" class="grid"></div>
+    </div>
+
+    <!-- স্ক্রিন ২: প্রশ্নের সিরিয়াল লিস্ট (এটি নতুন) -->
+    <div id="list-screen" class="container" style="display:none;">
+        <button class="back-btn" onclick="showCategories()">← ক্যাটাগরিতে ফিরুন</button>
+        <h2 id="cat-title-text"></h2>
+        <div id="question-serial-list" class="serial-list"></div>
+    </div>
+
+    <!-- স্ক্রিন ৩: কুইজ পপআপ (অপশন দেখানোর জন্য) -->
+    <div id="quiz-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <h3 id="modal-q-text"></h3>
+            <div id="options-box" class="options-grid"></div>
+            <p id="feedback"></p>
+            <button onclick="closeQuiz()" class="close-btn">বন্ধ করুন</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
